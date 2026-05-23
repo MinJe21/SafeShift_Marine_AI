@@ -110,3 +110,6 @@ ${recentNearMisses?.map(n => `- ${n.category} (${n.severity}): ${n.raw_text}`).j
     return new Response(JSON.stringify({ error: error.message }), { headers: { ...corsHeaders, 'Content-Type': 'application/json' }, status: 400 });
   }
 });
+
+
+
