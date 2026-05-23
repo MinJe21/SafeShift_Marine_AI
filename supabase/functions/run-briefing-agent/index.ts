@@ -3,7 +3,7 @@ import { getSupabaseClient, corsHeaders } from '../_shared/supabaseClient.ts';
 import { runMockAgent } from '../_shared/mockAgent.ts';
 import { getGeminiModel } from '../_shared/geminiClient.ts';
 
-serve(async (req) => {
+serve(async (req: Request) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
   }
@@ -77,7 +77,7 @@ serve(async (req) => {
 작업위치: 작업 현장
 
 [최근 위험 이력 (참고용)]
-${recentNearMisses?.map(n => `- ${n.category} (${n.severity}): ${n.raw_text}`).join('\n') || '최근 이력 없음'}
+${recentNearMisses?.map((n: any) => `- ${n.category} (${n.severity}): ${n.raw_text}`).join('\n') || '최근 이력 없음'}
 
 [현재 날씨]
 풍속: 12m/s, 파고: 1.5m (거친 파도)

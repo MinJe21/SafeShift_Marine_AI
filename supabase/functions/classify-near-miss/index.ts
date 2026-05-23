@@ -3,7 +3,7 @@ import { getSupabaseClient, corsHeaders } from '../_shared/supabaseClient.ts';
 import { runMockAgent } from '../_shared/mockAgent.ts';
 import { getGeminiModel } from '../_shared/geminiClient.ts';
 
-serve(async (req) => {
+serve(async (req: Request) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
   }

@@ -2,7 +2,7 @@ import { serve } from 'https://deno.land/std@0.177.0/http/server.ts';
 import { getSupabaseClient, corsHeaders } from '../_shared/supabaseClient.ts';
 import { generatePdfBytes } from '../_shared/pdfService.ts';
 
-serve(async (req) => {
+serve(async (req: Request) => {
   if (req.method === 'OPTIONS') {
     return new Response('ok', { headers: corsHeaders });
   }
