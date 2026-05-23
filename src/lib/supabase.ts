@@ -1,8 +1,8 @@
 import { createClient } from '@supabase/supabase-js';
 
-const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || '';
+const supabaseUrl = process.env.NEXT_PUBLIC_SUPABASE_URL || 'https://aurlkyjvmpxuewcdutcp.supabase.co';
 // Allow NEXT_PUBLIC_SUPABASE_ANON_KEY or NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY
-const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || '';
+const supabaseAnonKey = process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY || process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY || 'sb_publishable_S-3pfY9kSaISb-uCoMZFhw_63c9anj3';
 
 if (!supabaseUrl || !supabaseAnonKey) {
   console.warn('Supabase env vars are missing. Check your .env file.');
